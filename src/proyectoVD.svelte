@@ -12,16 +12,7 @@
     let cantidadEstrellas = d3
     onMount(() => {
     d3.csv("./data/personas.csv", d3.autoType).then(data => {
-      console.log(data)
-    
-      /* Actualizamos dominio con la data de edad */
-      /*let minMaxEdad = d3.extent(data, d => d.edad)
-      grosor = grosor.domain(minMaxEdad)
-
-      /* Actualizamos dominio y rango con la data de altura */
-      /*let minMaxAltura = d3.extent(data, d => d.altura
-      radioAltura = radioAltura.domain(minMaxAltura).range([25, 50])*/
-   
+      console.log(data)   
       personas = data
     })
   })
@@ -41,8 +32,10 @@
 <style>
   .header{
     text-align: center;
+    
   }
   h2 {
+    display: inline;
     font-family: IM FEEL English;
     font-size: 450%;
     position: relative;
@@ -52,12 +45,14 @@
     font-family: IM FEEL English;
     font-size: 140%;
     position: relative;
-    bottom: 135px;
+    bottom: 110px;
+    left: 150px;
   }
   p{
     font-family: IM FEEL English;
     font-size: 115%;
     position: relative;
-    bottom: 150px;
+    bottom: 120px;
+    left: 100px; 
   }
 </style>
