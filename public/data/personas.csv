@@ -1,6 +1,6 @@
 nombre,hobbie,antiguedad,utilidad,frecuencia,dificultad,recursos necesarios,categoria
-Tomás Gallo,Voley,5 años,5,2,Poco,Pocos,Deporte
-Iara Guglielmetti,Leer,3 años,4,2,Medio,Pocos,Educativo
+Tomás Gallo,Voley,5 años,2,2,Poco,Pocos,Deporte
+Iara Guglielmetti,Leer,3 años,1,2,Medio,Pocos,Educativo
 Ezequiel Grinblat,Juego al fútbol,7 años,4,1,Poco,Pocos,Deporte
 Federico,Aprender idiomas,10 años,5,7,Medio,Medio,Educativo
 Benjamin Toledo,Calistenia,4 años,3,3,Medio,Pocos,Deporte
@@ -32,7 +32,7 @@ Serena Marelli,Cerámica,1 año,4,1,Medio,Muchos,Arte
 Guido,Guitarra,3 años,4,2,Medio,Pocos,Arte		
 Camilo,Leer,5 años,5,7,Poco,Pocos,Educativo
 Juana Copello,Leer,20,5,4,Poco,Pocos,Educativo		
+josefina jahde,jugar al tenis,2 años,4,2,Medio,Muchos,Deporte
 
 # ACA FALTAN COSAS:
-josefina jahde,
 Tomas Curzio,							

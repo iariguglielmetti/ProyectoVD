@@ -36,18 +36,6 @@
         <h3 class="subtitulo">Arte, Deporte, Educación y Entretenimiento </h3>
         <p class="bajada">Explorando los hobbies a través de datos</p>
 
-    </div> 
-
-    <div class="introduction">
-      <p>Acá nose si tengo que poner algo escrito para explicar masomenos el tema pero bueno nada.</p>
-
-    </div>
-
-    <div class="Proyecto">
-        <div class="logos_de_los_hobbies">
-          <img src="/images/repr_categorias.png" width="700" alt="150"/>
-        </div>
-
     </div>
 </main>
 
@@ -74,16 +62,6 @@
     position: relative;
     bottom: 150px;
   }
-  .introduction{
-    text-align: center;
-  }
-  .Proyecto{
-    text-align: center;
-  }
-  .logos_de_los_hobbies{
-    margin-top: -100px;
-  }
 
-/*iara no te enojes, solo puse la imagen para ver como iba a quedar obviamente vamos a hacer una a una y bien*/
 
 </style>
