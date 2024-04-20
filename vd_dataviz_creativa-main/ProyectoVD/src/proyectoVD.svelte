@@ -31,8 +31,8 @@
 <main>
     <div class="header">
 
-        <img src="/images/logo.png" width="150" alt="150" />
-        <h1 class="headline" width=200px alt=200px>Hobbies</h1>
+        <img src="/images/logo.png" width="180" alt="180" />
+        <h1 class="headline">Hobbies</h1>
         <h2 class="subtitulo">Arte, Deporte, Educación y Entretenimiento </h2>
         <p id="bajada">Explorando los hobbies a través de datos</p>
 
@@ -41,29 +41,29 @@
     <div class="categorias">
       
       <h2 class="categoriasSub">Categorias</h2>
-      <img id="img-deporte" src="/images/deportes.png" width="100" alt="100"/>
+      <img id="img-arte" src="/images/arte.png" width="100" alt="100"/>
       <img id="img-educacion" src="/images/educacion.png" width="100" alt="100"/>
       <img id="img-entretenimiento" src="/images/entretenimiento.png" width="100" alt="100"/>
-      <img id="img-arte" src="/images/arte.png" width="100" alt="100"/>
-      <p id="deportes">Deportes</p>
+      <img id="img-deporte" src="/images/deportes.png" width="100" alt="100"/>
+      <p id="arte">Arte</p>
       <p id="educacion">Educación</p>
       <p id="entretenimiento">Entretenimiento</p>
-      <p id="arte">Arte</p>
+      <p id="deportes">Deportes</p>
 
     </div>
-<!--
+
     <div class="dificultad">
 
       <h2 class="dificultadSub">Dificultad</h2>
-      <img src="/images/estrella1.png" width="100" alt="100"/>
-      <img src="/images/estrella2.png" width="100" alt="100"/>
-      <img src="/images/estrella3.png" width="100" alt="100"/>
+      <img id="img-estrella1" src="/images/estrella1.png" width="75" alt="0"/>
+      <img id="img-estrella2" src="/images/estrella2.png" width="175" alt="0"/>
+      <img id="img-estrella3" src="/images/estrella3.png" width="280" alt="0"/>
       <p id="estrella1">Baja</p>
       <p id="estrella2">Media</p>
       <p id="estrella3">Alta</p>
 
     </div>
-
+<!--
     <div class="utilidad">
 
       <h2 class="utilidadSub">Utilidad generada</h2>
@@ -143,13 +143,13 @@
   .header h2{
     font-family: IM FEEL English;
     position: relative;
-    bottom: 100px;
+    bottom: 90px;
   }
   .header p{
     font-family: IM FEEL English;
     font-size: 115%;
     position: relative;
-    bottom: 110px;
+    bottom: 105px;
   }
 
   .categorias{
@@ -168,7 +168,7 @@
  #img-entretenimiento{
   left: 7%;
  }
- #img-arte{
+ #img-deporte{
   left: 12%;
  }
  .categorias p{
@@ -178,34 +178,49 @@
     position: relative;
     top: 30px;
   }
-  #deportes{
+  #arte{
     right: 52%;  
   }
   #educacion{
-    right: 48%;  
+    right: 45%;  
   }
   #entretenimiento{
-    right:46%;
+    right:40%;
   }
-  #arte{
-    right: 38%;  
+  #deportes{
+    right: 34%;  
   }
 
-  /*.dificultad{
+  .dificultad{
     display: inline-block;
+    position: relative;
+    top: 25px;
   }
-  .dificultad h2{font-family: josefin slab;
-    font-size: 30px;}
+  .dificultad h2{
+    font-family: 'Times New Roman';
+    font-size: 30px;
+  }
   .dificultad p{
     display: inline;
     font-family: 'Times New Roman';
-    position: relative;
-    top: 20px;
-    right: 300px;
   }
-  .estrella1{}
-  .estrella2{}
-  .estrella3{}
+  .dificultad img{
+   position: relative;
+ }
+  #img-estrella1{
+    bottom: 6px;
+  }
+  #img-estrella2{
+    left: 8%;
+  }
+  #img-estrella3{
+    left:15%
+  }
+  /*#estrella1{
+
+  }
+  #estrella2{}
+  #estrella3{}
 
   .utilidad{
     display: inline-block;
