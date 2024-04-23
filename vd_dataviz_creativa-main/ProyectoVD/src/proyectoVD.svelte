@@ -63,13 +63,13 @@
       <p id="estrella3">Alta</p>
 
     </div>
-<!--
+
     <div class="utilidad">
 
       <h2 class="utilidadSub">Utilidad generada</h2>
-      <img src="/images/bajaUtilidad.png" width="100" alt="100"/>
-      <img src="/images/mediaUtilidad.png" width="100" alt="100"/>
-      <img src="/images/altaUtilidad.png" width="100" alt="100"/>
+      <img id="bajaUtilidad" src="/images/bajaUtilidad.png" width="100" alt="100"/>
+      <img id="mediaUtilidad" src="/images/mediaUtilidad.png" width="100" alt="100"/>
+      <img id="altaUtilidad" src="/images/altaUtilidad.png" width="100" alt="100"/>
       <p id="baja">Baja</p>
       <p id="media">Media</p>
       <p id="alta">Alta</p>
@@ -79,54 +79,54 @@
     <div class="recursos">
 
       <h2 class="recursosSub">Recursos necesarios</h2>
-      <img src="/images/deportesPocosRecursos.png" width="100" alt="100"/>
-      <img src="/images/deportesAlgunosRecursos.png" width="100" alt="100"/>
-      <img src="/images/deportesMuchosRecursos.png" width="100" alt="100"/>
-      <img src="/images/educacionPocosRecursos.png" width="100" alt="100"/>
-      <img src="/images/educacionAlgunosRecursos.png" width="100" alt="100"/>
-      <img src="/images/educacionMuchosRecursos.png" width="100" alt="100"/>
-      <img src="/images/entretenimientoPocosRecursos.png" width="100" alt="100"/>
-      <img src="/images/entretenimientoAlgunosRecursos.png" width="100" alt="100"/>
-      <img src="/images/entretenimientoMuchosRecursos.png" width="100" alt="100"/>
-      <img src="/images/artePocosRecursos.png" width="100" alt="100"/>
-      <img src="/images/arteAlgunosRecursos.png" width="100" alt="100"/>
-      <img src="/images/arteMuchosRecursos.png" width="100" alt="100"/>
-      <p id="pocos">Pocos</p>
-      <p id="algunos">Algunos</p>
-      <p id="muchos">Muchos</p>
-  
+      <p id="pocosRecursos">Pocos</p>
+      <p id="algunosRecursos">Algunos</p>
+      <p id="muchosRecursos">Muchos</p>
+      <img id="imgArtePocos" src="/images/artePocosRecursos.png" width="100" alt="100"/>
+      <img id="imgArteAlgunos" src="/images/arteAlgunosRecursos.png" width="100" alt="100"/>
+      <img id="imgArteMuchos" src="/images/arteMuchosRecursos.png" width="100" alt="100"/>
+      <img id="imgEduPocos" src="/images/educacionPocosRecursos.png" width="100" alt="100"/>
+      <img id="imgEduAlgunos" src="/images/educacionAlgunosRecursos.png" width="100" alt="100"/>
+      <img id="imgEduMuchos" src="/images/educacionMuchosRecursos.png" width="100" alt="100"/>
+      <img id="imgEntrePocos" src="/images/entretenimientoPocosRecursos.png" width="100" alt="100"/>
+      <img id="imgEntreAlgunos" src="/images/entretenimientoAlgunosRecursos.png" width="100" alt="100"/>
+      <img id="imgEntreMuchos" src="/images/entretenimientoMuchosRecursos.png" width="100" alt="100"/>
+      <img id="imgDepPocos" src="/images/deportesPocosRecursos.png" width="100" alt="100"/>
+      <img id="imgDepAlgunos" src="/images/deportesAlgunosRecursos.png" width="100" alt="100"/>
+      <img id="imgDepMuchos" src="/images/deportesMuchosRecursos.png" width="100" alt="100"/>
     </div>
-
+    
     <div class="antiguedad">
 
-      <h2 class="antiguedadSub">Antiguedad, en años</h2>
-      <img src="/images/vasoBajo.png" width="100" alt="100"/>
-      <img src="/images/vasoMedio.png" width="100" alt="100"/>
-      <img src="/images/vasoAlto.png" width="100" alt="100"/>
-      <p id="0-6">Hasta 6 años</p>
-      <p id="7-13">De 7 a 13 años</p>
-      <p id="14-20">De 14 a 20 años</p>
+      <h2 class="antiguedadSub">Antiguedad</h2>
+      <img src="/images/vasoBajo.png" width="200" alt="100"/>
+      <img src="/images/vasoMedio.png" width="211" alt="100"/>
+      <img src="/images/vasoAlto.png" width="200" alt="100"/>
+      <p id="hasta6años">Hasta 6 años</p>
+      <p id="de7a13años">De 7 a 13 años</p>
+      <p id="de14a20años">De 14 a 20 años</p>
 
     </div>
 
     <div class="frecuencia">
 
       <h2 class="frecuenciaSub">Frecuencia</h2>
-      <img src="/images/frecuenciaBajaAmarilla.png" width="100" alt="100"/>
-      <img src="/images/frecuenciaMediaAmarilla.png" width="100" alt="100"/>
-      <img src="/images/frecuenciaAltaAmarilla.png" width="100" alt="100"/>
-      <img src="/images/frecuenciaBajaGris.png" width="100" alt="100"/>
-      <img src="/images/frecuenciaMediaGris.png" width="100" alt="100"/>
-      <img src="/images/frecuenciaAltaGris.png" width="100" alt="100"/>
-      <img src="/images/frecuenciaBajaAzul.png" width="100" alt="100"/>
-      <img src="/images/frecuenciaMediaAzul.png" width="100" alt="100"/>
-      <img src="/images/frecuenciaAltaAzul.png" width="100" alt="100"/>
-      <p id="baja">Baja</p>
-      <p id="media">Media</p>
-      <p id="alta">Alta</p>
+      <p id="frecuenciaBaja">Baja</p>
+      <p id="frecuenciaMedia">Media</p>
+      <p id="frecuenciaAlta">Alta</p>
+      <img id="frecuenciaBajaAma" src="/images/frecuenciaBajaAmarilla.png" width="60" alt="100"/>
+      <img id="frecuenciaMediaAma" src="/images/frecuenciaMediaAmarilla.png" width="100" alt="100"/>
+      <img id="frecuenciaAltaAma" src="/images/frecuenciaAltaAmarilla.png" width="150" alt="100"/>
+      <img id="frecuenciaBajaG" src="/images/frecuenciaBajaGris.png" width="60" alt="100"/>
+      <img id="frecuenciaMediaG" src="/images/frecuenciaMediaGris.png" width="100" alt="100"/>
+      <img id="frecuenciaAltaG" src="/images/frecuenciaAltaGris.png" width="150" alt="100"/>
+      <img id="frecuenciaBajaAz" src="/images/frecuenciaBajaAzul.png" width="60" alt="100"/>
+      <img id="frecuenciaMediaAz" src="/images/frecuenciaMediaAzul.png" width="100" alt="100"/>
+      <img id="frecuenciaAltaAz" src="/images/frecuenciaAltaAzul.png" width="150" alt="100"/>
+      <a id="textoVacio">textoVacio</a>
 
     </div>
- -->
+<!-- -->
 </main>
 
 
@@ -151,9 +151,11 @@
     position: relative;
     bottom: 105px;
   }
-
+  
   .categorias{
     display: inline-block;
+    position: relative;
+    left: 25px;
   }
   .categorias h2{
     font-family: 'Times New Roman';
@@ -163,8 +165,8 @@
    position: relative;
  }
  #img-educacion{
-  left: 2%;
- }
+   left: 2%;
+  }
  #img-entretenimiento{
   left: 7%;
  }
@@ -190,11 +192,12 @@
   #deportes{
     right: 34%;  
   }
-
+  
   .dificultad{
     display: inline-block;
     position: relative;
     top: 25px;
+    left: 25px;
   }
   .dificultad h2{
     font-family: 'Times New Roman';
@@ -203,6 +206,7 @@
   .dificultad p{
     display: inline;
     font-family: 'Times New Roman';
+    font-size: 20px;
   }
   .dificultad img{
    position: relative;
@@ -216,72 +220,232 @@
   #img-estrella3{
     left:15%
   }
-  /*#estrella1{
-
+  
+  .dificultad p{
+    position: relative;
+    top:20px;
   }
-  #estrella2{}
-  #estrella3{}
+  #estrella1{
+    right: 520px;
+  }
+  #estrella2{
+    right: 390px;
+  }
+  #estrella3{
+    right: 157px;
+  }
 
   .utilidad{
     display: inline-block;
+    position: relative;
+    bottom: 200px;
+    left: 50px;
   }
-  .utilidad h2{}
+  .utilidad h2{
+    font-family: 'Times New Roman';
+    font-size: 30px;
+  }
+  .utilidad img{
+    display: inline-block;
+    position: relative;
+    
+  }
+  #bajaUtilidad{
+    left: 75px;
+  }
+  #mediaUtilidad{
+    left: 125px;
+  }
+  #altaUtilidad{
+    left: 175px;
+  }
   .utilidad p{
     display: inline;
     font-family: 'Times New Roman';
+    font-size: 20px;
     position: relative;
-    top: 20px;
-    right: 300px;
   }
-  .utiliadad p #baja{}
-  .utiliadad p #media{}
-  .utiliadad p #alta{}
+  #baja{
+    top: 30px;
+    right: 203px;
+  }
+  #media{
+    top: 30px;
+    right: 100px;
+  }
+  #alta{
+    top: 30px;
+    left: 10px;
+  }
 
   .recursos{
     display: inline-block;
+    position: relative;
+    left: 700px;
+    bottom: 160px;
   }
-  .recursos h2{}
+  .recursos h2{
+    font-family: 'Times New Roman';
+    font-size: 30px;
+    position: relative;
+    left: 30px;
+  }
   .recursos p{
     display: inline;
     font-family: 'Times New Roman';
+    font-size: 20px;
     position: relative;
-    top: 20px;
-    right: 300px;
+    bottom: 80px;
+    left: 100px;
   }
-  .pocos{}
-  .algunos{}
-  .muchos{}
-
+  #algunosRecursos{
+    left: 225px;
+  }
+  #muchosRecursos{
+    left: 350px;
+  }
+  
+  .recursos img{
+    position: relative;
+    top: 50px;
+  }
+  #imgArtePocos {
+    right: 120px;
+  }
+  #imgArteAlgunos{
+    right: 40px;
+  }
+  #imgArteMuchos{
+    left: 45px;
+  }
+  #imgEduPocos {
+    top: 170px;
+    right: 430px;
+  }
+  #imgEduAlgunos{
+    top: 170px;
+    right: 350px;
+  }
+  #imgEduMuchos{
+    top: 170px;
+    right: 260px;
+  }
+  #imgEntrePocos {
+    top: 270px;
+    right: 740px;
+  }
+  #imgEntreAlgunos{
+    top: 270px;
+    right: 660px;
+  }
+  #imgEntreMuchos{
+    top: 270px;
+    right: 572px;
+  }
+  #imgDepPocos {
+    top: 380px;
+    right: 1050px;
+  }
+  #imgDepAlgunos{
+    top: 272px;
+    left: 260px;
+  }
+  #imgDepMuchos{
+    top: 272px;
+    left: 350px;
+  }
+  
   .antiguedad{
-    display: inline-block;
+    display: inline;
+    font-size: 20px;
+    font-family: 'Times New Roman';
+    position: relative;
+    bottom: 250px;
+    left: 25px;
   }
-  .antiguedad h2{}
   .antiguedad p{
     display: inline;
     font-family: 'Times New Roman';
     position: relative;
-    top: 20px;
-    right: 300px;
+    top: 50px;
   }
-  .0-6{}
-  .7-13{}
-  .14-20{}
-
+  #hasta6años{
+    right: 565px;
+  }
+  #de7a13años{
+    right: 480px;
+  }
+  #de14a20años{
+    right: 405px;
+  }
+  
   .frecuencia{
-    display: inline-block;
+    display: inline;
+    font-size: 20px;
+    font-family: 'Times New Roman';
+    position: relative;
+    bottom: 180px;
+    left: 25px;
   }
-  .frecuencia h2{}
   .frecuencia p{
     display: inline;
     font-family: 'Times New Roman';
     position: relative;
-    top: 20px;
-    right: 300px;
+    bottom: 130px;
   }
-  .frecuencia p #baja{}
-  .frecuencia p #media{}
-  .frecuencia p #alta{}*/
-
-
+  
+  #frecuenciaBaja{
+    left: 90px;
+  }
+  #frecuenciaMedia{
+    left: 250px;
+  }
+  #frecuenciaAlta{
+    left: 420px;
+  }
+  .frecuencia img{
+    position: relative;
+  }
+  #frecuenciaBajaAma{
+    top: 15px;
+    right: 57px;
+  }
+  #frecuenciaMediaAma{
+    top: 30px;
+    left: 68px;
+  }
+  #frecuenciaAltaAma{
+    top: 50px;
+    left: 155px;
+  }
+  #frecuenciaBajaG{
+    top: 180px;
+    right: 382px;
+  }
+  #frecuenciaMediaG{
+    top: 198px;
+    right: 255px;
+  }
+  #frecuenciaAltaG{
+    top: 220px;
+    right: 170px;
+  }
+  #frecuenciaBajaAz{
+    top: 350px;
+    right: 705px;
+  }
+  #frecuenciaMediaAz{
+    top: 363px;
+    right: 582px;
+  }
+  #frecuenciaAltaAz{
+    top: 390px;
+    right: 495px;
+  }
+  #textoVacio{
+    position: relative;
+    top: 400px;
+    color: black;
+  }
+  
 </style>
- <!-- no se si las clase pueden tener solamente numeros en el nombre / TAMBIEN DE 1 A 6 AÑOS-->
