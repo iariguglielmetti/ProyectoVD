@@ -1,9 +1,10 @@
 <script>
   
-    /*import * as d3 from "d3"
+    import * as d3 from "d3"
     import {onMount} from "svelte"
-
-    let personas = []
+    
+    //import 
+    let nombre = []
 
     let colorUtilidad = d3
         .scaleOrdinal()
@@ -24,15 +25,16 @@
       radioAltura = radioAltura.domain(minMaxAltura).range([25, 50])*/
    
       //personas = data
-    //})
- // })
+    })
+  })
 </script>
+
 
 
 <main>
     <div class="header">
 
-      <img src="/images/loguitin.png" width="180" alt="180" />
+      <img src="/images/logo.svg" width="160" alt=""/>
     </div>
   <div class= "headersito">
         <h1 class="headline">Hobbies</h1>
@@ -64,12 +66,12 @@
     display: inline-block;
   }
   .headersito h2{
-    font-family: IM FEEL English;
+    font-family: "kameron", serif;
     position: relative;
     bottom: 90px;
   }
   .headersito p{
-    font-family: IM FEEL English;
+    font-family: "kameron", serif;
     font-size: 115%;
     position: relative;
     bottom: 105px;

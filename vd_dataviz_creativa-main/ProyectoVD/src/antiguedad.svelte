@@ -2,27 +2,33 @@
     <div class="Antiguedad">
 
         <h2 class="antiguedad">Antiguedad</h2>
-        <img src="/images/conBorde.svg" width="100" alt="100"/>
-        <img src="/images/muchosRecursos.svg" width="100" alt="100"/>
-        <p id="hasta9años">Hasta 9 años</p>
-        <p id="de10a20años">De 10 a 20 años</p>
+        <div class="antiguedades"></div>
+        <div class="nuevos">
+          <img src="/images/muchosRecursos.svg" width="100" alt="100"/>
+          <p id="hasta9años">Hasta 9 años, para mi hasta 5 o 6 años.</p>
+        </div>
+        <div class="viejos">
+          <img src="/images/conBorde.svg" width="100" alt="100"/>
+          <p id="de10a20años">De 10 a 20 años</p>
+
+        </div>
   
       </div>
 </main>
 
 <style>
-.Antiguedad{
-  font-family: "krona one";
+  .Antiguedad{
+    text-align: center;
+    font-family: "krona one";
+
   }
-/*  .Antiguedad p{
-    display: inline;
-    font-family: 'Times New Roman';
-    position: relative;
-    top: 50px;
+  .antiguedades{
+    text-align: center;
   }
-  #hasta9años{
+  .nuevos{
+    display: inline-block;
   }
-  #de10a20años{
+  .viejos{
+    display: inline-block;
   }
-*/
 </style>

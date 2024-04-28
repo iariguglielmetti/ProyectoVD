@@ -4,65 +4,84 @@
 <main>
     <div class="Categorias">
     
-    <h2 class="categorias">Categorias</h2>
-      <img id="imgArte" src="/images/arte.svg" width="100" alt="100"/>
-      <img id="romboNaranja" src="/images/naranja.svg" width="100" alt="100"/>
-      <img id="imgEducacion" src="/images/educacion.svg" width="100" alt="100"/>
-      <img id="romboAzul" src="/images/azul.svg" width="100" alt="100"/>
-      <img id="imgEntretenimiento" src="/images/entretenimiento.svg" width="100" alt="100"/>
-      <img id="romboRojo" src="/images/rojo.svg" width="100" alt="100"/>
-      <img id="imgDeporte" src="/images/deporte.svg" width="100" alt="100"/>
-      <img id="romboVerde" src="/images/verde.svg" width="100" alt="100"/>
-      <p id="arte">Arte</p>
-      <p id="educacion">Educación</p>
-      <p id="entretenimiento">Entretenimiento</p>
-      <p id="deporte">Deporte</p>
-
+      <h2 class="categorias">Categorias</h2>
+      <div class="todasCategorias">
+        <div class="Arte">
+          <div class="ArteSub">
+            <img id="romboNaranja" src="/images/naranja.svg" width="110" alt=""/>
+            <p id="arte">Arte</p>
+          </div>
+          <img id="imgArte" src="/images/arte.svg" width="60" alt=""/>
+        </div> 
+        
+        <div class="Educacion">
+          <div class="EducacionSub">
+            <img id="romboAzul" src="/images/azul.svg" width="110" alt=""/>
+            <p id="educacion">Educación</p>
+          </div>
+          <img id="imgEducacion" src="/images/educacion.svg" width="65" alt=""/>
+        </div> 
+      
+        <div class="Entretenimiento">
+          <div class="EntretenimientoSub">
+            <img id="romboRojo" src="/images/rojo.svg" width="110" alt=""/>
+            <p id="entretenimiento">Entretenimiento</p>
+          </div>
+          <img id="imgEntretenimiento" src="/images/entretenimiento.svg" width="60" alt=""/>
+        </div>
+      
+        <div class="Deporte">
+          <div class="DeporteSub">
+            <img id="romboVerde" src="/images/verde.svg" width="110" alt=""/>
+            <p id="deporte">Deporte</p>
+          </div>
+          <img id="imgDeporte" src="/images/deporte.svg" width="60" alt=""/>
+        </div>
     </div>
+  </div>
 
 
 </main>
 
 <style>
-
-/* CATEGORIAS */
   .Categorias{
     font-family: "krona one";
+    margin-left: 50px;  
   }
-/*  .categorias h2{
-    font-family: 'Times New Roman';
-    font-size: 30px;
- }
- .categorias img{
-   position: relative;
- }
- #imgEducacion{
-   left: 2%;
+  .todasCategorias{
+    display: inline-flex;
   }
- #imgEntretenimiento{
-  left: 7%;
- }
- #imgDeporte{
-  left: 12%;
- }
- .categorias p{
-    display: inline;
-    font-size: 20px;
-    font-family: 'Times New Roman';
+  .ArteSub{
+    text-align: center;
+  }
+  .EducacionSub{
+    text-align: center;
+  }
+  .EntretenimientoSub{
+    text-align: center;
+  }
+  .DeporteSub{
+    text-align: center;
+  }
+  #imgArte{
     position: relative;
-    top: 30px;
+    bottom: 145px;
+    left:25px;
   }
-  #arte{
-    right: 52%;  
+  #imgEducacion{
+    position: relative;
+    bottom: 145px;
+    left:23px;
   }
-  #educacion{
-    right: 45%;  
+  #imgEntretenimiento{
+    position: relative;
+    bottom: 145px;
+    left:55px;
   }
-  #entretenimiento{
-    right:40%;
+  #imgDeporte{
+    position: relative;
+    bottom: 145px;
+    left:25px;
   }
-  #deporte{
-    right: 34%;  
-  }
-*/
+
 </style>

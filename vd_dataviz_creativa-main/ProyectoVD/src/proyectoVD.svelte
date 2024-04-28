@@ -42,12 +42,10 @@
 
 
 <style>
-/* HEADER */
   .header{
     text-align: center;
     font-family: "krona one";
   }
-  /*.header h1{}*/
   .header h2{
     font-size: 20px;
   }

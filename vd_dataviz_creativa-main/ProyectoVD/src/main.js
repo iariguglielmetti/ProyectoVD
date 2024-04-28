@@ -1,11 +1,11 @@
 // import './app.css'
-import App from "./proyectoVD.svelte"
+import App from "./proyectin.svelte"
 import App1 from "./categorias.svelte"
 import App2 from "./frecuencia.svelte"
 import App3 from "./utilidad.svelte"
 import App4 from "./antiguedad.svelte"
-import App5 from "./recursos.svelte"
-import App6 from "./dificultad.svelte"
+import App5 from "./dificultad.svelte"
+import App6 from "./recursos.svelte"
 
 const app = new App({
   target: document.body,
