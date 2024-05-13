@@ -27,13 +27,19 @@
     font-family: "krona one";
     float: right;
     margin-right: 50px;
+    position: relative;
+    bottom: 315px;
+    right: 50px;
   }
   .frecuencias{
     text-align: center;
+    font-size: 15px;
   }
   .frecBaja{
     display: inline-block;
     text-align: center;
+    position: relative;
+    right: 50px;
   }
   .frecMedia{
     display: inline-block;
@@ -42,6 +48,8 @@
   .frecAlta{
     display: inline-block;
     text-align: center;
+    position: relative;
+    left: 50px;
   }
 
 

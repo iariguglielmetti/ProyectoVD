@@ -28,19 +28,27 @@
   .recursosNecesarios{
     text-align: center;
     font-family: "krona one";
+    position: relative;
+    bottom: 250px;
+    right: 20px;
   }
   .todosRecursos{
     display: inline-flex;
+    font-size: 15px;
+    position: relative;
+    top: 10px;
   }
   .recursosBajos{
     text-align: center;
+    position: relative;
+    right: 30px;
   }
   .recursosMedios{
-    /*display: inline;*/
     text-align: center;
   }
   .recursosAltos{
-    /*display: inline;*/
     text-align: center;
+    position: relative;
+    left: 30px;
   }
 </style>

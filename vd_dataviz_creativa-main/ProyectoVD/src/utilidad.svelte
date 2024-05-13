@@ -19,17 +19,25 @@
   .Utilidad{
     font-family: "krona one";
     margin-left: 50px;
-    float:left
+    text-align: center;
+    position: relative;
+    top: 50px;
+    right: 250px;
   }
   .utilidades{
     text-align: center;
+    font-size: 15px;
   }
   .utilidadBaja{
     text-align: center;
     display: inline-block;
+    position: relative;
+    right: 10px;
   }
   .utilidadAlta{
     text-align: center;
     display: inline-block;
+    position: relative;
+    left: 10px;
   }
 </style>

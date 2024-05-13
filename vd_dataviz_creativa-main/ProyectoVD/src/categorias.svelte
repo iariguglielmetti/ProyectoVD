@@ -11,7 +11,7 @@
             <img id="romboNaranja" src="/images/naranja.svg" width="110" alt=""/>
             <p id="arte">Arte</p>
           </div>
-          <img id="imgArte" src="/images/arte.svg" width="60" alt=""/>
+          <img id="imgArte" src="/images/arte2.svg" width="60" alt=""/>
         </div> 
         
         <div class="Educacion">
@@ -19,7 +19,7 @@
             <img id="romboAzul" src="/images/azul.svg" width="110" alt=""/>
             <p id="educacion">Educación</p>
           </div>
-          <img id="imgEducacion" src="/images/educacion.svg" width="65" alt=""/>
+          <img id="imgEducacion" src="/images/educacion2.svg" width="65" alt=""/>
         </div> 
       
         <div class="Entretenimiento">
@@ -27,7 +27,7 @@
             <img id="romboRojo" src="/images/rojo.svg" width="110" alt=""/>
             <p id="entretenimiento">Entretenimiento</p>
           </div>
-          <img id="imgEntretenimiento" src="/images/entretenimiento.svg" width="60" alt=""/>
+          <img id="imgEntretenimiento" src="/images/entretenimiento2.svg" width="60" alt=""/>
         </div>
       
         <div class="Deporte">
@@ -35,7 +35,7 @@
             <img id="romboVerde" src="/images/verde.svg" width="110" alt=""/>
             <p id="deporte">Deporte</p>
           </div>
-          <img id="imgDeporte" src="/images/deporte.svg" width="60" alt=""/>
+          <img id="imgDeporte" src="/images/deporte2.svg" width="60" alt=""/>
         </div>
     </div>
   </div>
@@ -45,11 +45,26 @@
 
 <style>
   .Categorias{
+    text-align: center;
     font-family: "krona one";
     margin-left: 50px;  
+    position: relative;
+    right: 400px;
   }
   .todasCategorias{
     display: inline-flex;
+  }
+  .Deporte{
+    position: relative;
+    left: 50px;
+  }
+  .Entretenimiento{
+    position: relative;
+    left: 40px;
+  }
+  .Educacion{
+    position: relative;
+    left: 30px;
   }
   .ArteSub{
     text-align: center;
@@ -65,23 +80,31 @@
   }
   #imgArte{
     position: relative;
-    bottom: 145px;
-    left:25px;
+    bottom: 142px;
   }
   #imgEducacion{
     position: relative;
-    bottom: 145px;
-    left:23px;
+    bottom: 140px;
   }
   #imgEntretenimiento{
     position: relative;
-    bottom: 145px;
-    left:55px;
+    bottom: 142px;
   }
   #imgDeporte{
     position: relative;
     bottom: 145px;
-    left:25px;
+  }
+  .EducacionSub p{
+    font-size: 15px;
+  }
+  .ArteSub p{
+    font-size: 15px;
+  }
+  .DeporteSub p{
+    font-size: 15px;
+  }
+  .EntretenimientoSub p{
+    font-size: 15px;
   }
 
 </style>

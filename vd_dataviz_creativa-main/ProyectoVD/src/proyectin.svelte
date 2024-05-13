@@ -1,33 +1,28 @@
 <script>
+  import * as d3 from "d3"
+  import {onMount} from "svelte"
+    import Frecuencia from "./frecuencia.svelte";
   
-    import * as d3 from "d3"
-    import {onMount} from "svelte"
-    
-    //import 
-    let nombre = []
+  let personas = [];
+  let años = [];
+  let i = [0,1,2,3,4,5];
 
-    let colorUtilidad = d3
-        .scaleOrdinal()
-        .domain([])
-        .range([])
+  function aplicarStroke(año, pos){
+    if(año[pos] <= 6){
+      return true;
+    }
+  }
 
-    let cantidadEstrellas = d3
-    onMount(() => {
+  onMount(() => {
     d3.csv("./data/personas.csv", d3.autoType).then(data => {
-      console.log(data)
-    
-      /* Actualizamos dominio con la data de edad */
-      /*let minMaxEdad = d3.extent(data, d => d.edad)
-      grosor = grosor.domain(minMaxEdad)
-
-      /* Actualizamos dominio y rango con la data de altura */
-      /*let minMaxAltura = d3.extent(data, d => d.altura
-      radioAltura = radioAltura.domain(minMaxAltura).range([25, 50])*/
-   
-      //personas = data
-    })
-  })
+      console.log(data);
+      personas = data;
+      años = data.map(persona => persona.antiguedad);
+      console.log(años);
+    });
+  });
 </script>
+
 
 
 
@@ -58,12 +53,6 @@
     font-size: 450%;
     position: relative;
     bottom: 50px;
-
-    background: linear-gradient(to right, #FE004C, #27AAF4);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    display: inline-block;
   }
   .headersito h2{
     font-family: "kameron", serif;
@@ -76,4 +65,159 @@
     position: relative;
     bottom: 105px;
   }
+  .rombo{
+    width: 100px;
+    height: 100px;
+    background-color: white;
+    transform: rotate(45deg);
+  }
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+    justify-content: center;
+  }
+  .fila{
+    margin: 100px;
+  }
+  .rombo.con-contorno {
+    border: 5px solid white;
+  }
+  .colorVerdeRecursosPocos {
+    background-color: #19ff28;
+  }
+  .colorVerdeRecursosAlgunos {
+    background-color: #0a9b00;
+  }
+  .colorVerdeRecursosMuchos {
+    background-color: #006307;
+  }
+  .colorNaranjaRecursosPocos {
+    background-color: #FFB83D;
+  }
+  .colorNaranjaRecursosAlgunos {
+    background-color: #FFA200;
+  }
+  .colorNaranjaRecursosMuchos {
+    background-color: #835300;
+  }
+  .colorRojoRecursosPocos{
+    background-color: #FF5757;
+  }           
+  .colorRojoRecursosAlgunos {
+    background-color: #FF0000;
+  }
+  .colorRojoRecursosMuchos {
+    background-color: #920000;
+  }
+  .colorAzulRecursosPocos {
+    background-color: #6689FF;
+  }
+  .colorAzulRecursosAlgunos {
+    background-color: #003AFF;
+  }
+  .colorAzulRecursosMuchos {
+    background-color: #00124B;
+  }
+
+  .nombres{    
+    position: fixed;
+    top: 110px;
+    left: 60px;
+    transform: rotate(-45deg);
+    font-family: "krona One";
+    font-size: 15px;
+    white-space: nowrap; 
+    }
 </style>
+
+<div class="grid">
+  {#each personas as persona}
+    <div class="fila">
+      <div class="rombo" 
+           style="width: 115px; height: 115px; transform: rotate(45deg); border-radius: 10px;"
+           class:con-contorno={persona.antiguedad > 6} 
+           class:colorVerdeRecursosPocos={persona.categoria == 'deporte' && persona.recursosNecesarios == 'pocos'}
+           class:colorVerdeRecursosAlgunos={persona.categoria == 'deporte' && persona.recursosNecesarios == 'algunos'}
+           class:colorVerdeRecursosMuchos={persona.categoria == 'deporte' && persona.recursosNecesarios == 'muchos'}
+           class:colorNaranjaRecursosPocos={persona.categoria == 'arte' && persona.recursosNecesarios == 'pocos'}
+           class:colorNaranjaRecursosAlgunos={persona.categoria == 'arte' && persona.recursosNecesarios == 'algunos'}
+           class:colorNaranjaRecursosMuchos={persona.categoria == 'arte' && persona.recursosNecesarios == 'muchos'}
+           class:colorAzulRecursosPocos={persona.categoria == 'educacion' && persona.recursosNecesarios == 'pocos'}
+           class:colorAzulRecursosAlgunos={persona.categoria == 'educacion' && persona.recursosNecesarios == 'algunos'}
+           class:colorAzulRecursosMuchos={persona.categoria == 'educacion' && persona.recursosNecesarios == 'muchos'}
+           class:colorRojoRecursosPocos={persona.categoria == 'entretenimiento' && persona.recursosNecesarios == 'pocos'}
+           class:colorRojoRecursosAlgunos={persona.categoria == 'entretenimiento' && persona.recursosNecesarios == 'algunos'}
+           class:colorRojoRecursosMuchos={persona.categoria == 'entretenimiento' && persona.recursosNecesarios == 'muchos'}>
+<!-- NOMBRES --> 
+          <p class="nombres">{persona.nombre}</p>
+           
+<!-- UTILIDAD --> 
+          {#if persona.utilidad > 4}
+            <svg style = "width=55px; height=6px; transform: rotate(-45deg)">
+              <rect x="69" y="38" width="55" height="6" fill="white" stroke-linecap="round" rx="3" ry="3" />
+            </svg>
+          {/if}
+          
+<!-- DIFICULTAD -->  
+          {#if persona.dificultad == 'baja'}
+            <img src="./images/estrella.svg" width="17" alt="17" style="position: absolute; left: 17px; bottom: 82.5px; transform: rotate(27deg);">
+          {/if}
+          {#if persona.dificultad == 'media'}
+            <img src="./images/estrella.svg" width="17" alt="17" style="position: absolute; top: 31px; left: 10px; transform: rotate(27deg);">
+            <img src="./images/estrella.svg" width="17" alt="17" style="position: absolute; bottom: 87px; left: 30px; transform: rotate(27deg);">
+          {/if}
+          {#if persona.dificultad == 'alta'}
+            <img src="./images/estrella.svg" width="17" alt="17" style="position: absolute; top: 36px; left: 5px; transform: rotate(27deg);">
+            <img src="./images/estrella.svg" width="17" alt="17" style="position: absolute; bottom: 95px; left: 38px; transform: rotate(27deg);">
+            <img src="./images/estrella.svg" width="17" alt="17" style="position: absolute; bottom: 87px; left: 13px; transform: rotate(27deg);">
+          {/if} 
+
+<!-- FRECUENCIA -->
+          {#if persona.categoria == 'educacion'}
+            {#if persona.frecuencia <= 2}
+              <img src="./images/educacion.svg" width=70px alt="" style="position: absolute; bottom:15px; left: 28px; transform: rotate(-45deg);"/>
+              {:else if 3 <= persona.frecuencia && persona.frecuencia <= 5}
+              <img src="./images/educacion.svg" width=70px alt="" style="position: absolute; bottom:15px; left: 28px; transform: rotate(-45deg);"/>
+              <img src="./images/educacionFrecuenciaMedia.svg" width=70px alt="" style="position: absolute; bottom:3px; left: 16px; transform: rotate(-45deg);"/>
+            {:else if 6 <= persona.frecuencia}
+              <img src="./images/educacionFrecuenciaAlta.svg" width=70px alt="" style="position: absolute; bottom:15px; left: 28px; transform: rotate(-45deg);"/>
+            {/if}
+          {/if}
+          
+          {#if persona.categoria == 'deporte'}
+            {#if persona.frecuencia <= 2}
+              <img src="./images/deporte.svg" width=60px alt="" style="position: absolute; bottom:27px; left: 27px; transform: rotate(-45deg);"/>
+            {:else if 3 <= persona.frecuencia && persona.frecuencia <= 5}
+              <img src="./images/deporte.svg" width=60px alt="" style="position: absolute; bottom:27px; left: 27px; transform: rotate(-45deg);"/>
+              <img src="./images/deporteFrecuenciaMedia.svg" width=30.5px alt="" style="position: absolute; bottom:16px; left: 31px; transform: rotate(-45deg);"/>
+            {:else if 6 <= persona.frecuencia}
+              <img src="./images/deporteFrecuenciaAlta.svg" width=60px alt="" style="position: absolute; bottom:27px; left: 27px; transform: rotate(-45deg);"/>
+            {/if}
+          {/if}
+
+          {#if persona.categoria == 'arte'}
+            {#if persona.frecuencia <= 2}
+              <img src="./images/arte.svg" width=60px alt="" style="position: absolute; bottom:27px; left: 27px; transform: rotate(-45deg);"/>
+            {:else if 3 <= persona.frecuencia && persona.frecuencia <= 5}
+              <img src="./images/arte.svg" width=60px alt="" style="position: absolute; bottom:27px; left: 27px; transform: rotate(-45deg);"/>
+              <img src="./images/arteFrecuenciaMedia.svg" width=32px alt="" style="position: absolute; bottom:16.5px; left: 31px; transform: rotate(-45deg);"/>
+            {:else if 6 <= persona.frecuencia}
+              <img src="./images/arteFrecuenciaAlta.svg" width=60px alt="" style="position: absolute; bottom:27px; left: 27px; transform: rotate(-45deg);"/>
+            {/if}
+          {/if}
+          
+          {#if persona.categoria == 'entretenimiento'}
+            {#if persona.frecuencia <= 2}
+              <img src="./images/entretenimiento.svg" width=60px alt="" style="position: absolute; bottom:27px; left: 27px; transform: rotate(-45deg);"/>
+            {:else if 3 <= persona.frecuencia && persona.frecuencia <= 5}
+              <img src="./images/entretenimiento.svg" width=60px alt="" style="position: absolute; bottom:27px; left: 27px; transform: rotate(-45deg);"/>
+              <img src="./images/entretenimientoFrecuenciaMedia.svg" width=30.5px alt="" style="position: absolute; bottom:16.5px; left: 31px; transform: rotate(-45deg);"/>
+            {:else if 6 <= persona.frecuencia}
+              <img src="./images/entretenimientoFrecuenciaAlta.svg" width=60px alt="" style="position: absolute; bottom:27px; left: 27px; transform: rotate(-45deg);"/>
+            {/if}
+          {/if} 
+      </div>
+    </div>
+  {/each}
+</div>
