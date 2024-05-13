@@ -33,13 +33,11 @@
   font-family: "krona one";
   margin-right: 50px;
   position: relative;
-  bottom: 335px;
+  bottom: 245px;
   left: 460px;
 }
 .dificultades{
 display: inline-flex;
-
-
 }
 .difBaja{
   text-align: center;

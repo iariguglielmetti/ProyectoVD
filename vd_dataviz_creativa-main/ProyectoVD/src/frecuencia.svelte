@@ -6,15 +6,15 @@
         <div class="frecuencias">
           <div class="frecBaja">
             <img id="frecuenciaBaja" src="/images/frecuenciaBaja.svg" width="100" alt="100"/>
-            <p id="frecuenciaBaja">1 a 2</p>
+            <p id="frecuenciaBaja">1-2</p>
           </div>
           <div class="frecMedia">
             <img id="frecuenciaMedia" src="/images/frecuenciaMedia.svg" width="100" alt="100"/>
-            <p id="frecuenciaMedia">3 a 5</p>
+            <p id="frecuenciaMedia">3-5</p>
           </div>
           <div class="frecAlta">
             <img id="frecuenciaAlta" src="/images/frecuenciaAlta.svg" width="100" alt="100"/>
-            <p id="frecuenciaAlta">6 a 7</p>
+            <p id="frecuenciaAlta">6-7</p>
           </div>
         </div>
     </div>
@@ -28,7 +28,7 @@
     float: right;
     margin-right: 50px;
     position: relative;
-    bottom: 315px;
+    bottom: 225px;
     right: 50px;
   }
   .frecuencias{

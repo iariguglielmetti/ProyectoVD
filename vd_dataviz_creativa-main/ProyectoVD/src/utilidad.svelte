@@ -5,11 +5,11 @@
         <div class="utilidades">
           <div class="utilidadBaja">
             <img id="img-utilidadBaja" src="/images/utilidadBaja.svg" width="100" alt="100"/>
-            <p id="baja">1 a 3</p>    
+            <p id="baja">1 - 4</p>    
           </div>
           <div class="utilidadAlta">
             <img id="img-utilidadAlta" src="/images/utilidadAlta.svg" width="100" alt="100"/>
-            <p id="alta">4 a 5</p>                   
+            <p id="alta">5</p>                   
           </div>
         </div>
     </div>
@@ -21,7 +21,7 @@
     margin-left: 50px;
     text-align: center;
     position: relative;
-    top: 50px;
+    top: 140px;
     right: 250px;
   }
   .utilidades{

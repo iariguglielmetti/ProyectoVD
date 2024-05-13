@@ -29,7 +29,7 @@
     text-align: center;
     font-family: "krona one";
     position: relative;
-    bottom: 250px;
+    bottom: 150px;
     right: 20px;
   }
   .todosRecursos{

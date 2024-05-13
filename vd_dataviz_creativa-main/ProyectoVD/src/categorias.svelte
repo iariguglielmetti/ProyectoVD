@@ -50,6 +50,7 @@
     margin-left: 50px;  
     position: relative;
     right: 400px;
+    top: 90px;
   }
   .todasCategorias{
     display: inline-flex;

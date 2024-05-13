@@ -21,7 +21,7 @@
     font-family: "krona one";
     position: relative;
     left: 240px;
-    bottom: 150px;
+    bottom: 60px;
 
   }
   .antiguedades{

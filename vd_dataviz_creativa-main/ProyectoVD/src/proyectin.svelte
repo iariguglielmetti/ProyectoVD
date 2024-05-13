@@ -76,6 +76,8 @@
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 10px;
     justify-content: center;
+    position: relative;
+    bottom: 100px;
   }
   .fila{
     margin: 100px;
@@ -128,6 +130,14 @@
     font-family: "krona One";
     font-size: 15px;
     white-space: nowrap; 
+    }
+    .referencias{
+      text-align: center;
+      font-family: "krona One";
+      font-size: 32px;
+      position: relative;
+      top: 380px;
+      right: 180px;
     }
 </style>
 
@@ -217,7 +227,9 @@
               <img src="./images/entretenimientoFrecuenciaAlta.svg" width=60px alt="" style="position: absolute; bottom:27px; left: 27px; transform: rotate(-45deg);"/>
             {/if}
           {/if} 
+        </div>
       </div>
-    </div>
-  {/each}
+      {/each}
+      <h2 class="referencias">Referencias</h2>
 </div>
+
