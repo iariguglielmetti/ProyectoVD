@@ -1,24 +1,13 @@
 <script>
   import * as d3 from "d3"
   import {onMount} from "svelte"
-    import Frecuencia from "./frecuencia.svelte";
   
   let personas = [];
-  let años = [];
-  let i = [0,1,2,3,4,5];
-
-  function aplicarStroke(año, pos){
-    if(año[pos] <= 6){
-      return true;
-    }
-  }
 
   onMount(() => {
     d3.csv("./data/personas.csv", d3.autoType).then(data => {
       console.log(data);
       personas = data;
-      años = data.map(persona => persona.antiguedad);
-      console.log(años);
     });
   });
 </script>
@@ -74,7 +63,7 @@
   .grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-gap: 10px;
+    grid-gap: 0px;
     justify-content: center;
     position: relative;
     bottom: 100px;
@@ -128,7 +117,7 @@
     left: 60px;
     transform: rotate(-45deg);
     font-family: "krona One";
-    font-size: 15px;
+    font-size: 17px;
     white-space: nowrap; 
     }
     .referencias{
@@ -160,12 +149,12 @@
            class:colorRojoRecursosAlgunos={persona.categoria == 'entretenimiento' && persona.recursosNecesarios == 'algunos'}
            class:colorRojoRecursosMuchos={persona.categoria == 'entretenimiento' && persona.recursosNecesarios == 'muchos'}>
 <!-- NOMBRES --> 
-          <p class="nombres">{persona.nombre}</p>
+          <p class="nombres"  style="left: calc(100% - {persona.nombre.length*4}px);">{persona.nombre}</p>
            
 <!-- UTILIDAD --> 
           {#if persona.utilidad > 4}
             <svg style = "width=55px; height=6px; transform: rotate(-45deg)">
-              <rect x="69" y="38" width="55" height="6" fill="white" stroke-linecap="round" rx="3" ry="3" />
+              <rect x="77" y="43" width="40" height="6" fill="white" stroke-linecap="round" rx="3" ry="3" />
             </svg>
           {/if}
           
@@ -174,8 +163,8 @@
             <img src="./images/estrella.svg" width="17" alt="17" style="position: absolute; left: 17px; bottom: 82.5px; transform: rotate(27deg);">
           {/if}
           {#if persona.dificultad == 'media'}
-            <img src="./images/estrella.svg" width="17" alt="17" style="position: absolute; top: 31px; left: 10px; transform: rotate(27deg);">
-            <img src="./images/estrella.svg" width="17" alt="17" style="position: absolute; bottom: 87px; left: 30px; transform: rotate(27deg);">
+            <img src="./images/estrella.svg" width="17" alt="17" style="position: absolute; top: 28px; left: 5px; transform: rotate(27deg);">
+            <img src="./images/estrella.svg" width="17" alt="17" style="position: absolute; bottom: 94px; left: 30px; transform: rotate(27deg);">
           {/if}
           {#if persona.dificultad == 'alta'}
             <img src="./images/estrella.svg" width="17" alt="17" style="position: absolute; top: 36px; left: 5px; transform: rotate(27deg);">
@@ -186,45 +175,45 @@
 <!-- FRECUENCIA -->
           {#if persona.categoria == 'educacion'}
             {#if persona.frecuencia <= 2}
-              <img src="./images/educacion.svg" width=70px alt="" style="position: absolute; bottom:15px; left: 28px; transform: rotate(-45deg);"/>
+              <img src="./images/educacion.svg" width=90px alt="" style="position: absolute; bottom:5px; left: 20px; transform: rotate(-45deg);"/>
               {:else if 3 <= persona.frecuencia && persona.frecuencia <= 5}
-              <img src="./images/educacion.svg" width=70px alt="" style="position: absolute; bottom:15px; left: 28px; transform: rotate(-45deg);"/>
-              <img src="./images/educacionFrecuenciaMedia.svg" width=70px alt="" style="position: absolute; bottom:3px; left: 16px; transform: rotate(-45deg);"/>
+              <img src="./images/educacion.svg" width=90px alt="" style="position: absolute; bottom:5px; left: 20px; transform: rotate(-45deg);"/>
+              <img src="./images/educacionFrecuenciaMedia.svg" width=90px alt="" style="position: absolute; top:36px; left: 4px; transform: rotate(-45deg);"/>
             {:else if 6 <= persona.frecuencia}
-              <img src="./images/educacionFrecuenciaAlta.svg" width=70px alt="" style="position: absolute; bottom:15px; left: 28px; transform: rotate(-45deg);"/>
+              <img src="./images/educacionFrecuenciaAlta.svg" width=90px alt="" style="position: absolute; bottom:5px; left: 20px; transform: rotate(-45deg);"/>
             {/if}
           {/if}
           
           {#if persona.categoria == 'deporte'}
             {#if persona.frecuencia <= 2}
-              <img src="./images/deporte.svg" width=60px alt="" style="position: absolute; bottom:27px; left: 27px; transform: rotate(-45deg);"/>
+              <img src="./images/deporte.svg" width=75px alt="" style="position: absolute; bottom:18px; left: 21px; transform: rotate(-45deg);"/>
             {:else if 3 <= persona.frecuencia && persona.frecuencia <= 5}
-              <img src="./images/deporte.svg" width=60px alt="" style="position: absolute; bottom:27px; left: 27px; transform: rotate(-45deg);"/>
-              <img src="./images/deporteFrecuenciaMedia.svg" width=30.5px alt="" style="position: absolute; bottom:16px; left: 31px; transform: rotate(-45deg);"/>
+              <img src="./images/deporte.svg" width=75px alt="" style="position: absolute; bottom:18px; left: 21px; transform: rotate(-45deg);"/>
+              <img src="./images/deporteFrecuenciaMedia.svg" width=38px alt="" style="position: absolute; bottom:4px; left: 26px; transform: rotate(-45deg);"/>
             {:else if 6 <= persona.frecuencia}
-              <img src="./images/deporteFrecuenciaAlta.svg" width=60px alt="" style="position: absolute; bottom:27px; left: 27px; transform: rotate(-45deg);"/>
+              <img src="./images/deporteFrecuenciaAlta.svg" width=75px alt="" style="position: absolute; bottom:18px; left: 21px; transform: rotate(-45deg);"/>
             {/if}
           {/if}
 
           {#if persona.categoria == 'arte'}
             {#if persona.frecuencia <= 2}
-              <img src="./images/arte.svg" width=60px alt="" style="position: absolute; bottom:27px; left: 27px; transform: rotate(-45deg);"/>
+              <img src="./images/arte.svg" width=80px alt="" style="position: absolute; bottom:18px; left: 20px; transform: rotate(-45deg);"/>
             {:else if 3 <= persona.frecuencia && persona.frecuencia <= 5}
-              <img src="./images/arte.svg" width=60px alt="" style="position: absolute; bottom:27px; left: 27px; transform: rotate(-45deg);"/>
-              <img src="./images/arteFrecuenciaMedia.svg" width=32px alt="" style="position: absolute; bottom:16.5px; left: 31px; transform: rotate(-45deg);"/>
+              <img src="./images/arte.svg" width=80px alt="" style="position: absolute; bottom:18px; left: 20px; transform: rotate(-45deg);"/>
+              <img src="./images/arteFrecuenciaMedia.svg" width=43px alt="" style="position: absolute; bottom:3px; left: 25px; transform: rotate(-45deg);"/>
             {:else if 6 <= persona.frecuencia}
-              <img src="./images/arteFrecuenciaAlta.svg" width=60px alt="" style="position: absolute; bottom:27px; left: 27px; transform: rotate(-45deg);"/>
+              <img src="./images/arteFrecuenciaAlta.svg" width=80px alt="" style="position: absolute; bottom:18px; left: 20px; transform: rotate(-45deg);"/>
             {/if}
           {/if}
           
           {#if persona.categoria == 'entretenimiento'}
             {#if persona.frecuencia <= 2}
-              <img src="./images/entretenimiento.svg" width=60px alt="" style="position: absolute; bottom:27px; left: 27px; transform: rotate(-45deg);"/>
+              <img src="./images/entretenimiento.svg" width=80px alt="" style="position: absolute; bottom:15px; left: 20px; transform: rotate(-45deg);"/>
             {:else if 3 <= persona.frecuencia && persona.frecuencia <= 5}
-              <img src="./images/entretenimiento.svg" width=60px alt="" style="position: absolute; bottom:27px; left: 27px; transform: rotate(-45deg);"/>
-              <img src="./images/entretenimientoFrecuenciaMedia.svg" width=30.5px alt="" style="position: absolute; bottom:16.5px; left: 31px; transform: rotate(-45deg);"/>
+              <img src="./images/entretenimiento.svg" width=80px alt="" style="position: absolute; bottom:15px; left: 20px; transform: rotate(-45deg);"/>
+              <img src="./images/entretenimientoFrecuenciaMedia.svg" width=30.5px alt="" style="position: absolute; bottom:0px; left: 0px; transform: rotate(-45deg);"/>
             {:else if 6 <= persona.frecuencia}
-              <img src="./images/entretenimientoFrecuenciaAlta.svg" width=60px alt="" style="position: absolute; bottom:27px; left: 27px; transform: rotate(-45deg);"/>
+              <img src="./images/entretenimientoFrecuenciaAlta.svg" width=80px alt="" style="position: absolute; bottom:15px; left: 20px; transform: rotate(-45deg);"/>
             {/if}
           {/if} 
         </div>

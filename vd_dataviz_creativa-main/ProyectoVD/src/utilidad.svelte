@@ -33,11 +33,13 @@
     display: inline-block;
     position: relative;
     right: 10px;
+    top: 20px;
   }
   .utilidadAlta{
     text-align: center;
     display: inline-block;
     position: relative;
     left: 10px;
+    top: 20px;
   }
 </style>
