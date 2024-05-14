@@ -75,13 +75,13 @@
     border: 5px solid white;
   }
   .colorVerdeRecursosPocos {
-    background-color: #19ff28;
+    background-color: #5fc944;
   }
   .colorVerdeRecursosAlgunos {
-    background-color: #0a9b00;
+    background-color: #1dad13;
   }
   .colorVerdeRecursosMuchos {
-    background-color: #006307;
+    background-color: #006207;
   }
   .colorNaranjaRecursosPocos {
     background-color: #FFB83D;
@@ -102,10 +102,10 @@
     background-color: #920000;
   }
   .colorAzulRecursosPocos {
-    background-color: #6689FF;
+    background-color: #6c8cf5;
   }
   .colorAzulRecursosAlgunos {
-    background-color: #003AFF;
+    background-color: #14349E;
   }
   .colorAzulRecursosMuchos {
     background-color: #00124B;
@@ -177,8 +177,7 @@
             {#if persona.frecuencia <= 2}
               <img src="./images/educacion.svg" width=90px alt="" style="position: absolute; bottom:5px; left: 20px; transform: rotate(-45deg);"/>
               {:else if 3 <= persona.frecuencia && persona.frecuencia <= 5}
-              <img src="./images/educacion.svg" width=90px alt="" style="position: absolute; bottom:5px; left: 20px; transform: rotate(-45deg);"/>
-              <img src="./images/educacionFrecuenciaMedia.svg" width=90px alt="" style="position: absolute; top:36px; left: 4px; transform: rotate(-45deg);"/>
+              <img src="./images/educacionFrecuenciaMedia.svg" width=90px alt="" style="position: absolute; bottom: 5px; left: 20px; transform: rotate(-45deg);"/>
             {:else if 6 <= persona.frecuencia}
               <img src="./images/educacionFrecuenciaAlta.svg" width=90px alt="" style="position: absolute; bottom:5px; left: 20px; transform: rotate(-45deg);"/>
             {/if}
@@ -189,7 +188,7 @@
               <img src="./images/deporte.svg" width=75px alt="" style="position: absolute; bottom:18px; left: 21px; transform: rotate(-45deg);"/>
             {:else if 3 <= persona.frecuencia && persona.frecuencia <= 5}
               <img src="./images/deporte.svg" width=75px alt="" style="position: absolute; bottom:18px; left: 21px; transform: rotate(-45deg);"/>
-              <img src="./images/deporteFrecuenciaMedia.svg" width=38px alt="" style="position: absolute; bottom:4px; left: 26px; transform: rotate(-45deg);"/>
+              <img src="./images/deporteFrecuenciaMedia.svg" width=76px alt="" style="position: absolute; top:35px; left: 7px; transform: rotate(-45deg);"/>
             {:else if 6 <= persona.frecuencia}
               <img src="./images/deporteFrecuenciaAlta.svg" width=75px alt="" style="position: absolute; bottom:18px; left: 21px; transform: rotate(-45deg);"/>
             {/if}
@@ -200,7 +199,7 @@
               <img src="./images/arte.svg" width=80px alt="" style="position: absolute; bottom:18px; left: 20px; transform: rotate(-45deg);"/>
             {:else if 3 <= persona.frecuencia && persona.frecuencia <= 5}
               <img src="./images/arte.svg" width=80px alt="" style="position: absolute; bottom:18px; left: 20px; transform: rotate(-45deg);"/>
-              <img src="./images/arteFrecuenciaMedia.svg" width=43px alt="" style="position: absolute; bottom:3px; left: 25px; transform: rotate(-45deg);"/>
+              <img src="./images/arteFrecuenciaMedia.svg" width=42.5px alt="" style="position: absolute; bottom:4px; left: 25px; transform: rotate(-45deg);"/>
             {:else if 6 <= persona.frecuencia}
               <img src="./images/arteFrecuenciaAlta.svg" width=80px alt="" style="position: absolute; bottom:18px; left: 20px; transform: rotate(-45deg);"/>
             {/if}
@@ -211,7 +210,7 @@
               <img src="./images/entretenimiento.svg" width=80px alt="" style="position: absolute; bottom:15px; left: 20px; transform: rotate(-45deg);"/>
             {:else if 3 <= persona.frecuencia && persona.frecuencia <= 5}
               <img src="./images/entretenimiento.svg" width=80px alt="" style="position: absolute; bottom:15px; left: 20px; transform: rotate(-45deg);"/>
-              <img src="./images/entretenimientoFrecuenciaMedia.svg" width=30.5px alt="" style="position: absolute; bottom:0px; left: 0px; transform: rotate(-45deg);"/>
+              <img src="./images/entretenimientoFrecuenciaMedia.svg" width=40px alt="" style="position: absolute; bottom:0px; left: 0px; transform: rotate(-45deg);"/>
             {:else if 6 <= persona.frecuencia}
               <img src="./images/entretenimientoFrecuenciaAlta.svg" width=80px alt="" style="position: absolute; bottom:15px; left: 20px; transform: rotate(-45deg);"/>
             {/if}
